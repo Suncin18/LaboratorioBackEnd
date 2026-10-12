@@ -1,4 +1,22 @@
 package com.laboratorio1.laboratorio1.controllers;
 
+import com.laboratorio1.laboratorio1.dto.LoginRequestDTO;
+import com.laboratorio1.laboratorio1.dto.LoginResponseDTO;
+import com.laboratorio1.laboratorio1.service.AuthService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("api/v1/auth")
+@RequiredArgsConstructor
 public class AuthController {
+    private final AuthService authService;
+
+    @PostMapping("/login")
+    public LoginResponseDTO login(@RequestBody LoginRequestDTO request){
+        return authService.login(request);
+    }
 }

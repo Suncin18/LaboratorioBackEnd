@@ -1,4 +1,7 @@
 package com.laboratorio1.laboratorio1.dto;
 
-public class LoginRequestDTO {
+public record LoginRequestDTO(
+        String username,
+        String password
+) {
 }
