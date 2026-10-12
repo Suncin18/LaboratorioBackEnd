@@ -1,0 +1,312 @@
+{
+  "info": {
+    "_postman_id": "70d12e68-6f5c-4ca7-a5ca-7d8ebab3550e",
+    "name": "Laboratorio1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16890689"
+  },
+  "item": [
+    {
+      "name": "AdminLogin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/auth/login",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UserLogin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\":\"usuario\",\r\n    \"password\":\"usuario123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/auth/login",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "RegistrarCategoria",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "GMdMf6MztMNLo0usSihvPeI6EthWV9KH2oMlxIqRBP2pJnUBixXCym3DuaAm5fUnAJC_BdJ7AQOciuNJtCbEzuuh4aryow5P2EkNBok1L1lwZYrXpZs3vIVprRvFPjgfZZ3qLCyF1BFZ3ZU-XdXnuf45tv_KI6KneZhSCeyrmpT4W3egZoG4LX0LLy2qEpHtTPPRpw7EpsKaIqbAwSg"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Electrónica\",\r\n  \"description\": \"Productos electrónicos\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/category/",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "category",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "RegistrarProducto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "GMdMf6MztMNLo0usSihvPeI6EthWV9KH2oMlxIqRBP2pJnUBixXCym3DuaAm5fUnAJC_BdJ7AQOciuNJtCbEzuuh4aryow5P2EkNBok1L1lwZYrXpZs3vIVprRvFPjgfZZ3qLCyF1BFZ3ZU-XdXnuf45tv_KI6KneZhSCeyrmpT4W3egZoG4LX0LLy2qEpHtTPPRpw7EpsKaIqbAwSg"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Laptop\",\r\n  \"description\": \"Laptop para trabajo\",\r\n  \"price\": 850.00,\r\n  \"stock\": 10,\r\n  \"category\": {\r\n    \"id\": 1\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/product/",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "product",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ActualizarProducto",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "qaZfRMRToyyCd6v9TNpc1G2qzzLlMJLs1GTy19poxeaVVPanibe3sA7ZWE8llGsIpWO8WH5HHwFrv-MeT8I6PZOBv0nd45mhXqexfMQJjQsgVLH0PI8qT9PxAomKO_G43NLli4vvfkXa0Ty0SuCwcnLrE0lR9cbwu6eprmSpVigyT_uJ-sJjL41qu5w8bpRwbJ-xzwptXnYeE42IZVQ"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Laptop\",\r\n  \"description\": \"HP - ELITEBOOK - Core i5\",\r\n  \"price\": 850.00,\r\n  \"stock\": 9,\r\n  \"category\": {\r\n    \"id\": 1\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/product/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "product",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ActualizarCategoria",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "e0xFUR6V9kPq1f3N8ZNmmCZ7kIwmXsK9ylfrQjWsB3rv6FRd_PFJjaBGC1Q52-M1kqPOVB9BOWjLcFYRv0qSdE6O5M1G5clwcVDdyY6FzhPgHZ3qFOv3xVY7tavWhNDJKdtgQwVdJglc-D_Esb7OsWe3RxU2ZgnwI1vWcqII8uNoTlJoIHwO3A-OL0Nd1xi4QSmN9QXHJCSeL6iWJGA"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Tecnologia\",\r\n  \"description\": \"Productos tecnologicos\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/category/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "category",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ListarProductos",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "e0xFUR6V9kPq1f3N8ZNmmCZ7kIwmXsK9ylfrQjWsB3rv6FRd_PFJjaBGC1Q52-M1kqPOVB9BOWjLcFYRv0qSdE6O5M1G5clwcVDdyY6FzhPgHZ3qFOv3xVY7tavWhNDJKdtgQwVdJglc-D_Esb7OsWe3RxU2ZgnwI1vWcqII8uNoTlJoIHwO3A-OL0Nd1xi4QSmN9QXHJCSeL6iWJGA"
+          }
+        ],
+        "url": {
+          "raw": "localhost:8080/api/v1/product",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "product"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ListarCategorias",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "e0xFUR6V9kPq1f3N8ZNmmCZ7kIwmXsK9ylfrQjWsB3rv6FRd_PFJjaBGC1Q52-M1kqPOVB9BOWjLcFYRv0qSdE6O5M1G5clwcVDdyY6FzhPgHZ3qFOv3xVY7tavWhNDJKdtgQwVdJglc-D_Esb7OsWe3RxU2ZgnwI1vWcqII8uNoTlJoIHwO3A-OL0Nd1xi4QSmN9QXHJCSeL6iWJGA"
+          }
+        ],
+        "url": {
+          "raw": "localhost:8080/api/v1/category",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "category"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "BorrarProducto",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "e0xFUR6V9kPq1f3N8ZNmmCZ7kIwmXsK9ylfrQjWsB3rv6FRd_PFJjaBGC1Q52-M1kqPOVB9BOWjLcFYRv0qSdE6O5M1G5clwcVDdyY6FzhPgHZ3qFOv3xVY7tavWhNDJKdtgQwVdJglc-D_Esb7OsWe3RxU2ZgnwI1vWcqII8uNoTlJoIHwO3A-OL0Nd1xi4QSmN9QXHJCSeL6iWJGA"
+          }
+        ],
+        "url": {
+          "raw": "localhost:8080/api/v1/product/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "product",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "BorrarCategoria",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "e0xFUR6V9kPq1f3N8ZNmmCZ7kIwmXsK9ylfrQjWsB3rv6FRd_PFJjaBGC1Q52-M1kqPOVB9BOWjLcFYRv0qSdE6O5M1G5clwcVDdyY6FzhPgHZ3qFOv3xVY7tavWhNDJKdtgQwVdJglc-D_Esb7OsWe3RxU2ZgnwI1vWcqII8uNoTlJoIHwO3A-OL0Nd1xi4QSmN9QXHJCSeL6iWJGA"
+          }
+        ],
+        "url": {
+          "raw": "localhost:8080/api/v1/category/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "category",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
